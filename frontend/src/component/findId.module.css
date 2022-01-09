@@ -1,0 +1,40 @@
+.findId {
+  width: 800px;
+  margin: 0 auto;
+  padding: 100px;
+  border: 1px solid silver;
+}
+.findIdHeader {
+  margin-bottom: 50px;
+}
+.findIdInput_wrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+}
+.findIdInput_wrap span {
+  font-weight: 600;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.findByTel {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+.findIdBtn {
+  height: 50px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  width: 300px;
+}
+.findIdBtn:hover {
+  cursor: pointer;
+  background-color: rgb(20, 83, 155);
+}
