@@ -1,0 +1,12 @@
+package com.koreait.project.repository;
+
+import java.util.List;
+
+import com.koreait.project.domain.Review;
+
+public interface ReviewRepository {
+	
+	public List<Review> selectReviewListByArtNo(Long artNo);
+	public int insertReview(Review review);
+
+}

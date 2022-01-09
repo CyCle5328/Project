@@ -1,0 +1,10 @@
+package com.koreait.project.batch;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+
+@SpringBootApplication
+@EnableSchedulingc
+public class returnJob {
+
+}

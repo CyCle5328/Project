@@ -1,0 +1,20 @@
+package com.koreait.project.domain;
+
+
+public class Rental {
+	private Long rentalNo;
+	private Long artNo;
+	private Long userNo;
+	private String recieverName;
+	private String recieverTel;
+	private String address;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	private Date startDate;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	private Date endDate;
+	private String requirements;
+	private String rentalState;
+	
+	private ArtWork artwork;
+	private Member member;
+}

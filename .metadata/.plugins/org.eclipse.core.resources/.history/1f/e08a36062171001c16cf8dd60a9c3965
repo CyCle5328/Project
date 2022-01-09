@@ -1,0 +1,36 @@
+package com.koreait.project.domain;
+
+import java.sql.Date;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Builder
+public class Rental {
+	private Long rentalNo;
+	private Long artNo;
+	private Long userNo;
+	private String recieverName;
+	private String recieverTel;
+	private String address;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	private Date startDate;
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+	private Date endDate;
+	private String requirements;
+	private String rentalState;
+	
+	private ArtWork artwork;
+	private Member member;
+}

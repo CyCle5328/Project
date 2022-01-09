@@ -1,0 +1,19 @@
+package com.koreait.project.batch;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class ReturnJob {
+	@Autowired
+	private SqlSessionTemplate sqlSession;
+	private RentalRepository repository;
+	
+	
+	@Scheduled(cron = "0 0 1 1/1 * *")
+	public void execute() throws Exception {
+		
+		repository = sqlSession.getMapper(RentalRepository.class);
+		repository.returnArt();
+		
+	}
+}

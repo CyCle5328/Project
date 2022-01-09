@@ -1,0 +1,15 @@
+package com.koreait.project.repository;
+
+import java.util.List;
+import java.util.Map;
+
+import com.koreait.project.domain.Comments;
+
+public interface CommentsRepository {
+	
+	public List<Comments> selectCommentsListByReviewNo(Long reviewNo);
+	public int insertComments(Comments comments);
+	public int updateComments(Comments comments);
+	public int deleteComments(Long commentNo);
+
+}
