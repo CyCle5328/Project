@@ -1,0 +1,11 @@
+.header {
+  display: flex;
+}
+.logo_box {
+  width: 98px;
+  height: 28px;
+}
+.nav {
+  display: flex;
+  list-style: none;
+}
