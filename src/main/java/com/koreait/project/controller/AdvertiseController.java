@@ -16,7 +16,6 @@ public class AdvertiseController {
 	AdvertiseService advertiseService;
 	
 	@GetMapping(value = "api/advertisement")
-	@ResponseBody
 	public Map<String, Object> findAlladvertise(){
 		return advertiseService.FindAlladvertise(); 
 	}
