@@ -2,3 +2,29 @@
   position: relative;
   min-width: 320px;
 }
+.fake {
+  background-image: url('../../../../public/fake.png');
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 300vh;
+}
+.top {
+  opacity: 1;
+  border: 1px solid rgb(119, 116, 116);
+  box-shadow: 0px 0px 2px px rgba(109, 109, 112, 0.2);
+  background-color: #eee;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 0;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  transition: opacity 0.3s ease-in;
+}
+.active {
+  opacity: 1;
+  z-index: 30;
+}

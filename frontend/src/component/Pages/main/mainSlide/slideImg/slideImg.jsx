@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './slideImg.module.css';
-import React, { useState } from 'react';
+import React from 'react';
 
 const cx = classNames.bind(styles);
 
