@@ -8,7 +8,7 @@
 		<result column="AUTHOR_NAME" property="authorName"/>
 		<result column="AUTHOR_INTRO" property="authorIntro"/>
 	</resultMap>	
-	<resultMap type="Artwork" id="ArtworkMap">
+	<resultMap type="ArtWork" id="ArtworkMap">
 		<result column="ART_NO" property="artNo"/>
 		<result column="AUTHOR_NO" property="authorNo"/>
 		<result column="ART_NAME" property="artName"/>
@@ -18,6 +18,11 @@
 		<result column="STATE" property="state"/>
 		<collection property="author" resultMap="AuthorMap"/>
 	</resultMap>
+
+	<select id="artList" resultType="ArtWork">
+		SELECT ART_NO, AUTHOR_NO, ART_NAME, PATH, PRICE, THEME, STATE
+		 FROM ARTWORK
+	</select>
 
 	<select id="artTotalCount" parameterType="Map" resultType="int">
 		SELECT COUNT(*)

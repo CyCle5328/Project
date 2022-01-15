@@ -19,7 +19,13 @@ public class ArtServiceImpl implements ArtService {
 	public ArtServiceImpl(SqlSessionTemplate sqlSession) {
 		repository = sqlSession.getMapper(ArtRepository.class);
 	}
-	
+	@Override
+	public Map<String, Object> FindAllartList() {
+		List<ArtWork> list = repository.artList();
+		Map<String, Object> map = new HashMap<>();
+		map.put("list", list);
+		return map;
+	}
 	@Override
 	public Map<String, Object> findArtList(Map<String, Object> m) {
 		int totalRecord = repository.artTotalCount(m);

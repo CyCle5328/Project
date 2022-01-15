@@ -5,11 +5,13 @@ public class Advertisement {
 	private String adPath;
 	private String adType;
 	private String adTitle;
+	private String adPath;
 	private String adExplain;
 	
 	public Advertisement() {
 		// TODO Auto-generated constructor stub
 	}
+  
 	public Advertisement(Long adNo, String adPath, String adType, String adTitle, String adExplain) {
 		super();
 		this.adNo = adNo;
@@ -43,6 +45,14 @@ public class Advertisement {
 		this.adTitle = adTitle;
 	}
 
+	public String getAdPath() {
+		return adPath;
+	}
+
+	public void setAdPath(String adPath) {
+		this.adPath = adPath;
+	}
+
 	public String getAdExplain() {
 		return adExplain;
 	}
@@ -60,9 +70,8 @@ public class Advertisement {
 	}
 	@Override
 	public String toString() {
-		return "Advertisement [adNo=" + adNo + ", adType=" + adType + ", adTitle=" + adTitle + ", adExplain="
-				+ adExplain + "]";
+		return "Advertisement [adNo=" + adNo + ", adType=" + adType + ", adTitle=" + adTitle + ", adPath=" + adPath
+				+ ", adExplain=" + adExplain + "]";
 	}
-	
 	
 }
