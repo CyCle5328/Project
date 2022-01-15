@@ -1,0 +1,43 @@
+#userBox {
+  float: left;
+  width: 131px;
+  height: 60px;
+  padding: 9px;
+  border-left: 1px solid #eee;
+  margin-left: 9px;
+  line-height: 42px;
+  font-size: 14px;
+  color: #222;
+}
+#userBox_loggedIn {
+  display: none;
+  position: relative;
+}
+#userBox_settingBtn {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 36px 0 42px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+#userBox_loginBtn {
+  width: 59px;
+}
+#userBox_loginBtn,
+#userBox_joinBtn {
+  display: block;
+  float: left;
+  cursor: pointer;
+  padding-left: 4px;
+}
+#userBox_loginBtn:hover,
+#userBox_joinBtn:hover,
+#userBox_settingBtn {
+  opacity: 0.7;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}

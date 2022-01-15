@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.koreait.project.domain.Member;
 import com.koreait.project.service.MemberService;
 
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class MemberController {
 	
@@ -66,7 +68,7 @@ public class MemberController {
 		
 	}
 	
-	// 회원 비밀번호 변경
+	// 회원 비밀번호 변경vsvs
 	@PutMapping(value="api/members/changePw", produces="application/json; charset=UTF-8")
 	public Map<String, Object> changePw(@RequestBody Member member) {
 		return service.changePw(member);
