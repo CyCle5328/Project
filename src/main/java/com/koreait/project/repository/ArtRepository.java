@@ -12,6 +12,7 @@ import com.koreait.project.domain.Author;
 
 @Mapper
 public interface ArtRepository {
+	public List<ArtWork> artList();
 	public int artTotalCount(Map<String, Object> map);
 	public List<ArtWork> findArtList(Map<String, Object> map);
 	public ArtWork selectArtByNo(Long artNo);
