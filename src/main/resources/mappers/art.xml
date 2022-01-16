@@ -19,9 +19,10 @@
 		<collection property="author" resultMap="AuthorMap"/>
 	</resultMap>
 
-	<select id="artList" resultType="ArtWork">
-		SELECT ART_NO, AUTHOR_NO, ART_NAME, PATH, PRICE, THEME, STATE
-		 FROM ARTWORK
+	<select id="artList" resultMap="ArtworkMap">
+		SELECT W.ART_NO, W.ART_NAME, W.PATH, W.PRICE, W.THEME, W.STATE, R.AUTHOR_NO, R.AUTHOR_NAME, R.AUTHOR_INTRO
+		 FROM AUTHOR R, ARTWORK W
+		WHERE R.AUTHOR_NO(+) = W.AUTHOR_NO 
 	</select>
 
 	<select id="artTotalCount" parameterType="Map" resultType="int">
