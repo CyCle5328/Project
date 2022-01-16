@@ -2,6 +2,7 @@ package com.koreait.project.domain;
 
 public class Advertisement {
 	private Long adNo;
+	private String adPath;
 	private String adType;
 	private String adTitle;
 	private String adPath;
@@ -9,6 +10,15 @@ public class Advertisement {
 	
 	public Advertisement() {
 		// TODO Auto-generated constructor stub
+	}
+  
+	public Advertisement(Long adNo, String adPath, String adType, String adTitle, String adExplain) {
+		super();
+		this.adNo = adNo;
+		this.adPath = adPath;
+		this.adType = adType;
+		this.adTitle = adTitle;
+		this.adExplain = adExplain;
 	}
 
 	public Long getAdNo() {
@@ -50,7 +60,14 @@ public class Advertisement {
 	public void setAdExplain(String adExplain) {
 		this.adExplain = adExplain;
 	}
+	
 
+	public String getAdPath() {
+		return adPath;
+	}
+	public void setAdPath(String adPath) {
+		this.adPath = adPath;
+	}
 	@Override
 	public String toString() {
 		return "Advertisement [adNo=" + adNo + ", adType=" + adType + ", adTitle=" + adTitle + ", adPath=" + adPath

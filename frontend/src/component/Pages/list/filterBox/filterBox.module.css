@@ -1,0 +1,41 @@
+.filterBox {
+  border: 1px solid lightgray;
+  border-left: 3px solid black;
+  border-bottom: none;
+  width: 600px;
+  height: auto;
+  margin: 14px auto 0;
+  position: relative;
+  top: 80px;
+}
+.title {
+  padding: 15px 30px 25px 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.first {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+}
+.second {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+}
+.filter {
+  display: flex;
+  padding: 0 20px;
+}
+.theme,
+.price {
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 5px;
+}
+.span {
+  padding: 15px;
+  font-size: 16px;
+  color: rgb(115, 111, 111);
+  cursor: pointer;
+}

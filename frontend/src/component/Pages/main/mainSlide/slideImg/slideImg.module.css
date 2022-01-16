@@ -1,0 +1,51 @@
+.imgBox {
+  margin-top: 60px;
+  width: 100vw;
+  height: 70vh;
+}
+.contentBox {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100vw;
+  height: 30%;
+  min-height: 200px;
+  background-color: rgba(238, 238, 238, 0.5);
+}
+.content {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+}
+.img {
+  width: 100vw;
+  height: 70vh;
+  object-fit: fill;
+}
+.type {
+  display: inline-block;
+  margin: 27px 0 10px 0px;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: #fff;
+  padding: 1px 13px;
+}
+.typeBrown {
+  background-color: rgb(195, 168, 116);
+}
+.typeRed {
+  background-color: rgb(255, 80, 77);
+}
+.typeGreen {
+  background-color: rgb(47, 112, 50);
+}
+.title {
+  color: rgba(64, 63, 63, 0.813);
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.explain {
+  color: #4a4a4a;
+  font-size: 16px;
+}
