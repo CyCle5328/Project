@@ -3,7 +3,7 @@ package com.koreait.project.util;
 public class PageUtils {
 
 	private int totalRecord;          // 전체 게시글 갯수(DB에서 가져옴)
-	private int recordPerPage = 12;   // 한 페이지에 표시하는 게시글 갯수(여기서 정함)
+	private int recordPerPage = 50;   // 한 페이지에 표시하는 게시글 갯수(여기서 정함)
 	private int totalPage;            // 전체 페이지 갯수(totalRecord, recordPerPage로 계산)
 
 	/************************************************

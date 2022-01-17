@@ -1,0 +1,35 @@
+.artBox {
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+.imgBox {
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  margin: 0 auto;
+}
+.artBox:hover .img {
+  filter: drop-shadow(0 0px 10px gray) brightness(115%);
+}
+.img {
+  width: 100%;
+  filter: none;
+  transition: filter 0.2s ease-in;
+}
+.contentBox {
+  width: 100%;
+  margin-left: 20px;
+}
+.title {
+  margin: 5px auto 7px auto;
+}
+.price {
+  color: gray;
+  margin-bottom: 5px;
+}
+.theme {
+  color: gray;
+}
+.link {
+  text-decoration: none;
+  color: inherit;
+}

@@ -24,13 +24,13 @@
 .leftBtn {
   border-bottom: 5px solid black;
   border-left: 5px solid black;
-  left: 20px;
+  left: 180px;
   transform: translateY(-50%) rotate(45deg);
 }
 .rightBtn {
   border-top: 5px solid black;
   border-right: 5px solid black;
-  right: calc(-98vw);
+  right: calc(-88vw);
   transform: translateY(-50%) rotate(45deg);
 }
 .slideWrap {
