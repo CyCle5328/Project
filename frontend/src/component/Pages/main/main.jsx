@@ -1,10 +1,8 @@
 import classNames from 'classnames/bind';
 import React, { useEffect, useRef, useState } from 'react';
-import Navbar from '../../navbar/navbar';
 import styles from './main.module.css';
 import MainSlide from './mainSlide/mainSlide';
 import { FiArrowUp } from 'react-icons/fi';
-import Footer from '../../footer/footer';
 
 const cx = classNames.bind(styles);
 
@@ -42,14 +40,12 @@ const Main = (props) => {
 
   return (
     <div className={cx('wrap')}>
-      <Navbar />
       <MainSlide />
       <div className={cx('fake')} />
       <FiArrowUp
-        className={cx(`${btnStatus ? 'top active' : 'top'}`)}
+        className={cx('top', `${!btnStatus ? 'active' : ''}`)}
         onClick={scrollToTop}
       />
-      <Footer />
     </div>
   );
 };

@@ -6,16 +6,16 @@ const cx = classNames.bind(styles);
 
 const Footer = () => {
   return (
-    <footer className={cx('footer')}>
-      <div className={cx('wrap')}>
-        <div className={cx('introduce')}>
-          <ul>
+    <footer className={styles.footer}>
+      <div className={styles.wrap}>
+        <div className={styles.introduce}>
+          <ul className={cx('ul')}>
             <li>회사소개</li>
             <li>제후문의</li>
             <li>작가공모 지원</li>
           </ul>
         </div>
-        <div className={cx('content')}>
+        <div className={styles.content}>
           <p>
             상호명 : 오픈갤러리 I 대표 : 박의규 I 사업자등록번호 : 206-86-83224
             I 호스팅 제공자 : AWS 통신판매신고번호 : 제2014-서울강남-01614호 I
@@ -25,7 +25,7 @@ const Footer = () => {
             <span>개인정보처리방침</span>FAQ
           </p>
         </div>
-        <div className={cx('right')}>
+        <div className={styles.right}>
           <p>
             <b>대표번호 1668-1056</b> 평일 <span>9:00 - 18:00</span>
           </p>

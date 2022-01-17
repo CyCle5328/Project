@@ -1,4 +1,11 @@
 .wrap {
   width: 100vw;
-  height: auto;
+}
+.artWrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  width: 800px;
+  gap: 8px;
+  margin: 120px auto 0;
 }
