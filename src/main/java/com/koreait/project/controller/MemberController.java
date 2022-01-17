@@ -68,7 +68,7 @@ public class MemberController {
 		
 	}
 	
-	// 회원 비밀번호 변경vsvs
+	// 회원 비밀번호 변경
 	@PutMapping(value="api/members/changePw", produces="application/json; charset=UTF-8")
 	public Map<String, Object> changePw(@RequestBody Member member) {
 		return service.changePw(member);

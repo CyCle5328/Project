@@ -23,7 +23,7 @@ public class ArtController {
 		public Map<String, Object> FindAllartList(){
 			return artService.FindAllartList();
 		}
-
+ 
 	// 작품 목록 페이징처리 (+ 정렬, 필터, 검색기능)
 		@GetMapping(value = "api/artList/page/{page}/state/{state}/arrange/{arrange}/theme/{theme}/query/{query}", produces = "application/json; charset=UTF-8")
 		public Map<String, Object> findArtList(@PathVariable(value = "page", required=false) Optional<String> opt, 
