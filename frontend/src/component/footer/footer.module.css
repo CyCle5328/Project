@@ -5,16 +5,48 @@
   color: #fff;
   font-size: 12px;
   width: 100vw;
-  height: 150px;
+  height: 13.8em;
 }
 .wrap {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
+  position: relative;
 }
 .ul {
   display: flex;
-  font-size: 22px;
+  font-size: 14px;
   color: white;
+  font-weight: bold;
+  padding: 20px 0;
 }
 .ul > li {
+  margin-right: 25px;
+}
+.content {
+  color: #989898;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.three > span {
+  text-decoration: underline;
+  margin: 0 8px;
+  cursor: pointer;
+}
+.three > span:nth-of-type(2) {
+  color: white;
+}
+.right {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  color: #989898;
+}
+.right > b {
+  font-size: 16px;
+  color: white;
+  margin-right: 0.8em;
+}
+.right > span {
+  font-size: 14px;
+  color: white;
 }

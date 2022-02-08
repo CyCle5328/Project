@@ -3,9 +3,9 @@ import classNames from 'classnames/bind';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './artDetail.module.css';
-import { BsEmojiSmileFill, BsEmojiFrownFill } from 'react-icons/bs';
-import { AiOutlineShareAlt, AiOutlineExclamationCircle } from 'react-icons/ai';
-import { BiCheckboxSquare, BiCheckbox } from 'react-icons/bi';
+import Recommand from './recommand/recommand';
+import RightFix from './rightFix/rightFix';
+import TryBox from './tryBox/tryBox';
 
 const cx = classNames.bind(styles);
 
@@ -13,6 +13,7 @@ const ArtDetail = () => {
   const params = useParams();
   const artNo = params.artNo;
   const [art, setArt] = useState([]);
+  const [benefit, setBenefit] = useState(false);
 
   async function getArtwork() {
     const response = await axios.get(
@@ -21,9 +22,13 @@ const ArtDetail = () => {
     setArt(response.data.artwork);
   }
 
+  const onClickBenifit = () => {
+    setBenefit(!benefit);
+  };
+
   useEffect(() => {
     getArtwork();
-  }, []);
+  }, [art]);
 
   return (
     <section className={cx('wrap')}>
@@ -31,50 +36,15 @@ const ArtDetail = () => {
         <div className={cx('imgBox')}>
           <img src={`${art.path}`} alt="이미지" className={cx('img')} />
         </div>
-        <div className={cx('rightFix')}>
-          <div className={cx('state')}>
-            {art.state === 1 ? (
-              <span>
-                <BsEmojiSmileFill /> 렌탈 가능 작품
-              </span>
-            ) : (
-              <span>
-                <BsEmojiFrownFill /> 렌탈중
-              </span>
-            )}
+        <div className={cx('left')}>
+          <div className={cx('banner')}>
+            <h3>신규고객 대상 혜택</h3>
+            <p>첫 렌탈이라면 무조건 33,000원!</p>
           </div>
-          <h2 className={cx('name')}>{art.artName}</h2>
-          <div className={cx('infoWrap')}>
-            <div className={cx('author')}>작가</div>
-            <div>최풀림</div>
-            <div className={cx('info')}>작품정보</div>
-            <p>천에 색연필, 오일파스텔</p>
-          </div>
-          <div className={cx('share')}>
-            <AiOutlineShareAlt />
-          </div>
-          <div className={cx('rentalSection')}>
-            <div className={cx('first')}>
-              <span>
-                렌탈가 &nbsp;
-                <AiOutlineExclamationCircle />
-              </span>
-              <div>월 {art.price}</div>
-            </div>
-            <div className={cx('second')}>
-              <span>렌탈기간</span>
-              <div>3개월 (기본)</div>
-            </div>
-            <div className={cx('third')}>
-              <div className={cx('back')}>
-                <div className={cx('benefit')}>
-                  <BiCheckbox /> <span>[신규고객] 첫 렌탈 혜택</span>
-                </div>
-                <button>자세히 보기</button>
-              </div>
-            </div>
-          </div>
+          <TryBox art={art} />
+          <Recommand />
         </div>
+        <RightFix art={art} onClickBenifit={onClickBenifit} benefit={benefit} />
       </div>
     </section>
   );
