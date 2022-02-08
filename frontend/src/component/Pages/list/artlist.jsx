@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from './artlist.module.css';
-import classNames from 'classnames';
 import Navbar from '../../navbar/navbar';
 import FillterBox from './filterBox/filterBox';
 import axios from 'axios';
 import ArtworkList from './artworkList/artworkList';
-
-const cx = classNames.bind(styles);
 
 const Artlist = () => {
   const [list, setList] = useState([]);

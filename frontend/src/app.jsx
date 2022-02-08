@@ -19,7 +19,7 @@ function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/detail/:artNo" element={<ArtDetail />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

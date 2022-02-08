@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import React from 'react';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './artworkList.module.css';
 
 const cx = classNames.bind(styles);

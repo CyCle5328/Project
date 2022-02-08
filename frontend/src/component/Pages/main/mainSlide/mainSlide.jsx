@@ -18,10 +18,6 @@ const MainSlide = () => {
     setSize(response.data.list.length);
   }
 
-  const autoSlide = () => {
-    slideMover('left');
-  };
-
   useEffect(() => {
     getSlide();
   }, []);
