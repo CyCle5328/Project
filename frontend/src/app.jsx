@@ -8,7 +8,7 @@ import Navbar from './component/navbar/navbar';
 import Footer from './component/footer/footer';
 import ArtDetail from './component/Pages/detail/artDetail';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
@@ -22,6 +22,6 @@ function App() {
       {/* <Footer /> */}
     </BrowserRouter>
   );
-}
+};
 
 export default App;
